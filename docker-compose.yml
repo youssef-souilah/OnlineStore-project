@@ -1,0 +1,63 @@
+version: '3.9'
+services:
+  admin:
+    build:
+      context: ./admin
+      dockerfile: Dockerfile
+    ports:
+      - 3009:3000
+    restart: always 
+  client:
+    build: 
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    restart: always 
+
+  api:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - 3003:3003
+    restart: always 
+    depends_on:
+      - mongo
+      - rabbit
+
+  notifications:
+    build:
+      context: ./notification-service
+      dockerfile: Dockerfile
+    ports:
+      - 3004:3004
+    restart: always 
+    depends_on:
+      - mongo
+      - rabbit
+
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 27020:27017
+    volumes:
+      - mongodb:/data/db
+
+  rabbit:
+    image: rabbitmq:3-management
+    restart: always
+    ports:
+      - 5672:5672
+      - 15672:15672
+  gateway:
+    image: nginx
+    restart: always
+    volumes:
+      - ./Gateway/api.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - 80:80
+volumes:
+  mongodb: 
+

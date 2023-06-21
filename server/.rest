@@ -1,0 +1,52 @@
+POST  http://localhost:5555/api/v1/register HTTP/1.1
+content-type: application/json
+
+{
+    "username":"SkySsef",
+    "email":"skyssef@gmail.com",
+    "password":"1111",
+    "first_name":"youssef",
+    "last_name":"souilah",
+    "is_admin":true,
+    "city":"m'diq",
+    "address":"av 5 boulvard 55",
+    "postal_code":"515151"
+}
+###
+POST  http://localhost:5555/api/v1/login_admin HTTP/1.1
+content-type: application/json
+
+{
+    "email":"souilah@gmail.com",
+    "password":"0000"
+}
+###
+POST  http://localhost:5555/api/v1/login HTTP/1.1
+content-type: application/json
+
+{
+    "email":"s@s.net",
+    "password":"0000"
+}
+###
+GET  http://localhost:5555/api/v1/users HTTP/1.1
+content-type: multipart/form-data
+authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDhiNDBmMTc1OWQ3Zjk4ZTAxODc3YyIsImlzX2FkbWluIjp0cnVlLCJpYXQiOjE2Nzg4MTE3MjZ9.2QcSppXL5TbJc_8Wy9sma1Syi0Mc94C6R9TlUcLMKKE
+
+
+###
+POST  http://localhost:5555/api/v1/categories/add 
+content-type: multipart/form-data
+authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDhiNDBmMTc1OWQ3Zjk4ZTAxODc3YyIsImlzX2FkbWluIjp0cnVlLCJpYXQiOjE2Nzg4MTE3MjZ9.2QcSppXL5TbJc_8Wy9sma1Syi0Mc94C6R9TlUcLMKKE
+
+{
+    "name":"testljljk",
+    "photo":"skdjvbnklds,v lknsw v:"
+}
+###
+GET  http://localhost:5555/api/v1/products?search=ele
+content-type: multipart/form-data
+
+###
+GET  http://localhost:5000/api/v1/categories/
+content-type: multipart/form-data

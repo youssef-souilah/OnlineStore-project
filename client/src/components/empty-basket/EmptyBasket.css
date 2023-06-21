@@ -1,0 +1,21 @@
+.empty-basket{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 15px;
+}
+.empty-basket h1{
+    color: white;
+    font-size: 40px;
+    font-weight:bold ;
+    text-align: center ;
+}
+.empty-basket div{
+    width: 50vh;
+    height: 50vh;
+    margin-top: -30px;
+}
+.empty-basket div img{
+    width: 100%;
+    height: 100%;
+}

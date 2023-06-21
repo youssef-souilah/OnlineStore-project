@@ -1,0 +1,171 @@
+.product-details-container{
+    display: flex;
+    height: 75vh;
+    column-gap: 10px;
+    justify-content: flex-end;
+    overflow-y: scroll;
+    position: relative;
+}
+.product-intro{
+    display: flex;
+    width: 30%;
+    min-width: 300px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    position:fixed ;
+    height: 75vh;
+    left: 5%;
+    align-self: flex-start;
+    background-color: #03a9f4;
+}
+.item-wrapper { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    width: 200px;   
+}
+.product-intro div h1{
+    color: white;
+    font-size: 40;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.product-intro div h4{
+    margin-top: -25px;
+    color: white;
+    font-size: 20;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.product-intro div button{
+    height: 30px;
+    width: 120px;
+    border-radius: 9px;
+    border: 0;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+.product-infos{
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.product-infos div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    color: black;
+}
+.product-infos div:nth-child(2){
+    width: 90px ;
+    border-left: 1px solid white;
+}
+.product-infos div span{
+    color: white;
+    font-weight: normal;
+}
+.product-intro-image{
+    width: 80%;
+    height: 160px;
+    border-radius: 5px;
+}
+.product-intro-image img{
+    width: 100%;
+    height: 100%;
+}
+.product-details-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 66%;
+    row-gap: 10px;
+}
+.product-images ,.product-description, .similar-products{
+    width: 100%;
+    background-color: #03a9f4;
+    border-radius: 20px;
+}
+.product-images h3,.product-description h3{
+    color: white;
+    margin-left: 30px;
+}
+.product-images-list{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    overflow-x: scroll;
+}
+.product-images-list div{
+    width: 350px;
+    height: 250px;
+    margin-right: 10px;
+}
+.product-images-list div img{
+    width: 350px;
+    height: 100%;
+    border-radius: 20px;
+}
+.product-description p{
+    padding: 15px;
+    color: white;
+}
+
+.div-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.div-header h3{
+    color: white;
+}
+.div-header a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+.product-similar{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    overflow-x: scroll;
+}
+
+@media screen and (max-width: 995px) {
+    .product-details-container{
+        flex-direction: column;
+        justify-content: flex-start;
+        overflow-y: scroll;
+        row-gap: 10px;
+    }
+    .product-intro{
+        width: 100%;
+        position: relative;
+        left: 0;
+        height: max-content;
+    }
+    .item-wrapper{
+        flex-direction: row;
+        width: 90%;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .item-wrapper div:nth-child(1){
+        width: 45%;
+        max-width: 300px;
+        margin-right: 10px;
+    }
+    .product-details-div{
+        width: 100%;
+        height: max-content;
+    }
+}

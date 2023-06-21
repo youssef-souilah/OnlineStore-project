@@ -1,0 +1,54 @@
+.customer-order{
+    display: flex;
+    padding: 2px 5px;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: space-around   ;
+    column-gap: 10px;
+    width: 90%;
+    background-color: #00BCD4;
+}
+.order-image{
+    width: 200px;
+    height: 200px;
+}
+.order-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px ;
+}
+.order-infos {  
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+}
+.order-price{
+    font-weight: bold;
+    text-decoration: overline;
+}
+.order-status-proccess{
+    padding: 5px 1px ;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(243, 243, 64);
+    border-radius: 15px
+}
+.order-status-shiped{
+    padding: 5px 1px ;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background-color:green;
+    border-radius: 15px
+}
+.order-status-rejected{
+    padding: 5px 1px ;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background-color:red;
+    border-radius: 15px
+}
